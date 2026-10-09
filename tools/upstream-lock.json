@@ -1,0 +1,25 @@
+{
+  "game_target": "1.20.0.4",
+  "dependency_versions": {
+    "Council Assignment Automation": "0.1.0",
+    "Council Autopilot": "1.0.12"
+  },
+  "inputs": {
+    "caa": {
+      "sha256": "6b8c5ff054ff6b5f08d85e6f6f76367a8b92d817028d36b3215789473b68c2d4",
+      "bytes": 64042
+    },
+    "autopilot": {
+      "sha256": "d5dec434e7306060761ae4f1913aaf8d04ca23012e30a7c4d67c2740834bf380",
+      "bytes": 90991
+    },
+    "vanilla": {
+      "sha256": "19a3a611974314ad5648c2821ac15a6068db8509176dcc1fab8c44188373e60d",
+      "bytes": 63403
+    },
+    "autopilot_license": {
+      "sha256": "ae070ceaa7d77990a4fd7d06a3a2249e18e1d7b69bd1aa6da2863891e951a4b8",
+      "bytes": 1090
+    }
+  }
+}

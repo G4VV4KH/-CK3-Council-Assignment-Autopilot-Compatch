@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-09T11:44:43.596321+00:00",
+  "method": "built-in image_gen compositing, followed by mechanical System.Drawing sizing/format encoding",
+  "user_request": "Cleverly combine both original thumbnails with CAA + CA painted over the result.",
+  "inputs": [
+    {
+      "file": "thumbnail.png",
+      "bytes": 537718,
+      "sha256": "41299a963e2aab941efc6ac52723952b01bbd3d9513b06cddafc421f9be1d300"
+    },
+    {
+      "file": "thumbnail.png",
+      "bytes": 490324,
+      "sha256": "6773f1a4f58dc33daa8b75d5bc7fb9d2e0232be1610a821d83103c48349f4910"
+    }
+  ],
+  "generation": {
+    "square": {
+      "file": {
+        "file": "cover-square-source.png",
+        "bytes": 2771112,
+        "sha256": "b315ec852dac6d684976512ec0f902cf0d0218f29f766528b77729447cc88ceb"
+      },
+      "prompt_summary": "Use case: compositing. Fuse the CAA turquoise council emblem, crowned silhouettes and gold network with Council Autopilot's sunglass-wearing medieval cat clerk. Create one coherent playful painterly square cover with dark teal, gold and red. Large hand-painted text exactly CAA + CA; remove original title/byline text. Preserve both recognizable visual identities and safe margins.",
+      "original": "exec-c52f8e86-2a56-45d3-993d-3e793cb1f2b5.png"
+    },
+    "landscape": {
+      "file": {
+        "file": "cover-landscape-source.png",
+        "bytes": 2724444,
+        "sha256": "0b97b3d5f92f2e92d0db4dc5172cda13b470ea92f635f78eb2a355c0ce3a9a93"
+      },
+      "prompt_summary": "Adapt the generated square cover to a matching 16:9 landscape composition: full turquoise emblem/network left, cat clerk and wax seal right, large CAA + CA title above, all key subjects inside safe margins. No additional text, clipping, stretching or letterboxing.",
+      "original": "exec-01184dec-5230-405d-bcc6-9f56628838b5.png"
+    }
+  },
+  "outputs": {
+    "cover-square.png": {
+      "file": "cover-square.png",
+      "bytes": 2826843,
+      "sha256": "b76a91648f2caad5f7fdf9fa1e6d2926b56a0c871e92e6d7e5d26ff3bff1d633"
+    },
+    "cover-square.jpg": {
+      "file": "cover-square.jpg",
+      "bytes": 392862,
+      "sha256": "1613ad2b0d5b5fd7e5923708dcdafa140db064196deb041ace9f545af4881c59"
+    },
+    "cover-paradox.png": {
+      "file": "cover-paradox.png",
+      "bytes": 5446404,
+      "sha256": "b7e5718bceceab8cfe4043acb57c8be744cb445ce85bef31853d20c8b1450497"
+    },
+    "cover-paradox.jpg": {
+      "file": "cover-paradox.jpg",
+      "bytes": 661636,
+      "sha256": "4f6782fdac62e12b4316bea65debf6109196d56b2ee1d6573392618c88ee7a50"
+    },
+    "thumbnail.png": {
+      "file": "thumbnail.png",
+      "bytes": 729498,
+      "sha256": "89a17ad064058132fa0c10d97950c93b85efc0963e406d9a561852980b1e6ad3"
+    }
+  },
+  "review": {
+    "text": "CAA + CA",
+    "square": "PASS",
+    "landscape": "PASS",
+    "full_subjects_and_text_inside_frame": true,
+    "gallery": "No new gameplay screenshot supplied for this compatibility patch; promotional cover only."
+  },
+  "provenance": "AI-composited promotional artwork from both mods' thumbnails. Not a gameplay screenshot. Preserve Council Autopilot upstream MIT notice separately.",
+  "exact_prompts": {
+    "file": "prompts.txt",
+    "bytes": 2699,
+    "sha256": "5cf4bacc0c8b015741acce52204941d165e0ffa13bee6712ad046f09df3a3062"
+  }
+}
