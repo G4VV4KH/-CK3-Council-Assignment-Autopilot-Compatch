@@ -1,0 +1,241 @@
+﻿# Council Autopilot: toggle buttons in the council window. Root = player, scope:councillor = councillor.
+
+
+cap_dejure_culture = {
+	scope = character
+	is_shown = {
+		exists = scope:councillor
+		scope:councillor = { has_council_position = councillor_steward }
+	}
+	effect = {
+		if = {
+			limit = {
+				has_global_variable = cap_dejure_culture
+				scope:councillor = { is_performing_council_task = task_promote_culture }
+			}
+			remove_global_variable = cap_dejure_culture
+		}
+		else = {
+			set_global_variable = { name = cap_dejure_culture value = yes }
+			save_scope_as = councillor_liege
+			if = {
+				limit = { scope:councillor = { NOT = { is_performing_council_task = task_promote_culture } } }
+				cap_dejure_pick_culture = yes
+				if = {
+					limit = { exists = scope:target_county }
+					scope:councillor = { cap_steward_automatic_task_promote_culture_start = yes }
+				}
+			}
+		}
+	}
+}
+
+cap_dejure_conversion = {
+	scope = character
+	is_shown = {
+		exists = scope:councillor
+		scope:councillor = { has_council_position = councillor_court_chaplain }
+	}
+	effect = {
+		if = {
+			limit = {
+				has_global_variable = cap_dejure_conversion
+				scope:councillor = { is_performing_council_task = task_conversion }
+			}
+			remove_global_variable = cap_dejure_conversion
+		}
+		else = {
+			set_global_variable = { name = cap_dejure_conversion value = yes }
+			save_scope_as = councillor_liege
+			if = {
+				limit = { scope:councillor = { NOT = { is_performing_council_task = task_conversion } } }
+				cap_dejure_pick_conversion = yes
+				if = {
+					limit = { exists = scope:target_county }
+					scope:councillor = { cap_court_chaplain_automatic_task_conversion_start = yes }
+				}
+			}
+		}
+	}
+}
+
+cap_value_control = {
+	scope = character
+	is_shown = {
+		exists = scope:councillor
+		scope:councillor = { has_council_position = councillor_marshal }
+	}
+	effect = {
+		if = {
+			limit = {
+				has_global_variable = cap_value_control
+				scope:councillor = { is_performing_council_task = task_increase_control }
+			}
+			remove_global_variable = cap_value_control
+		}
+		else = {
+			set_global_variable = { name = cap_value_control value = yes }
+			save_scope_as = councillor_liege
+			if = {
+				limit = { scope:councillor = { NOT = { is_performing_council_task = task_increase_control } } }
+				cap_value_pick_control = yes
+				if = {
+					limit = { exists = scope:target_county }
+					scope:councillor = { cap_marshal_automatic_task_increase_control_start = yes }
+				}
+			}
+		}
+	}
+}
+
+cap_auto_royal_favor = {
+	scope = character
+	is_shown = {
+		has_dlc_feature = royal_court
+		exists = scope:councillor
+		scope:councillor = { has_council_position = councillor_chancellor }
+	}
+	is_valid = {
+		court_grandeur_current_level >= 2
+	}
+	effect = {
+		if = {
+			limit = {
+				has_global_variable = cap_auto_royal_favor
+				scope:councillor = { is_performing_council_task = task_bestow_royal_favor }
+			}
+			remove_global_variable = cap_auto_royal_favor
+		}
+		else = {
+			set_global_variable = { name = cap_auto_royal_favor value = yes }
+			save_scope_as = councillor_liege
+			if = {
+				limit = {
+					court_grandeur_current_level >= 2
+					scope:councillor = { NOT = { is_performing_council_task = task_bestow_royal_favor } }
+				}
+				cap_pick_royal_favor = yes
+				if = {
+					limit = { exists = scope:favor_target }
+					scope:councillor = { cap_start_royal_favor = yes }
+				}
+			}
+		}
+	}
+}
+
+cap_dejure_culture_active = {
+	scope = character
+	is_shown = {
+		has_global_variable = cap_dejure_culture
+		exists = scope:councillor
+		scope:councillor = { is_performing_council_task = task_promote_culture }
+	}
+}
+
+cap_dejure_conversion_active = {
+	scope = character
+	is_shown = {
+		has_global_variable = cap_dejure_conversion
+		exists = scope:councillor
+		scope:councillor = { is_performing_council_task = task_conversion }
+	}
+}
+
+cap_value_control_active = {
+	scope = character
+	is_shown = {
+		has_global_variable = cap_value_control
+		exists = scope:councillor
+		scope:councillor = { is_performing_council_task = task_increase_control }
+	}
+}
+
+cap_auto_royal_favor_active = {
+	scope = character
+	is_shown = {
+		has_global_variable = cap_auto_royal_favor
+		exists = scope:councillor
+		scope:councillor = { is_performing_council_task = task_bestow_royal_favor }
+	}
+}
+
+cap_auto_secrets_toggle = {
+	scope = character
+	is_shown = {
+		exists = scope:councillor
+		scope:councillor = { has_council_position = councillor_spymaster }
+	}
+	effect = {
+		if = {
+			limit = {
+				has_global_variable = cap_auto_find_secrets
+				scope:councillor = { OR = { is_performing_council_task = task_find_secrets is_performing_council_task = task_disrupt_schemes } }
+			}
+			remove_global_variable = cap_auto_find_secrets
+		}
+		else = {
+			set_global_variable = { name = cap_auto_find_secrets value = yes }
+			trigger_event = cap_council.0013
+		}
+	}
+}
+
+cap_auto_secrets_toggle_active = {
+	scope = character
+	is_shown = {
+		has_global_variable = cap_auto_find_secrets
+		exists = scope:councillor
+		scope:councillor = { OR = { is_performing_council_task = task_find_secrets is_performing_council_task = task_disrupt_schemes } }
+	}
+}
+
+# Fabricate Claim autopilot: the button is always shown for the court chaplain, but greyed out until he fabricates
+# a claim (you pick the first target by hand, the autopilot carries on from there). Same pattern as cap_auto_royal_favor.
+cap_auto_fabricate = {
+	scope = character
+	is_shown = {
+		exists = scope:councillor
+		scope:councillor = { has_council_position = councillor_court_chaplain }
+	}
+	is_valid = {
+		exists = scope:councillor
+		OR = {
+			has_global_variable = cap_auto_fabricate
+			scope:councillor ?= { is_performing_council_task = task_fabricate_claim }
+		}
+	}
+	effect = { # three levels per click: off -> autopilot -> autopilot + Maximum -> off
+		if = {
+			limit = { has_global_variable = cap_auto_fabricate_max }
+			remove_global_variable = cap_auto_fabricate_max
+			remove_global_variable = cap_auto_fabricate
+		}
+		else_if = {
+			limit = { has_global_variable = cap_auto_fabricate }
+			set_global_variable = { name = cap_auto_fabricate_max value = yes }
+		}
+		else = {
+			set_global_variable = { name = cap_auto_fabricate value = yes }
+		}
+	}
+}
+
+cap_auto_fabricate_active = { # level 1: autopilot without Maximum
+	scope = character
+	is_shown = {
+		has_global_variable = cap_auto_fabricate
+		NOT = { has_global_variable = cap_auto_fabricate_max }
+		exists = scope:councillor
+		scope:councillor = { is_performing_council_task = task_fabricate_claim }
+	}
+}
+
+cap_auto_fabricate_max_active = { # level 2: autopilot + Maximum
+	scope = character
+	is_shown = {
+		has_global_variable = cap_auto_fabricate_max
+		exists = scope:councillor
+		scope:councillor = { is_performing_council_task = task_fabricate_claim }
+	}
+}

@@ -24,3 +24,9 @@ The native scenario exercised CAA appointments, the Council Autopilot marshal co
 `publishing/description.en.md` is the exported canonical description; README is a platform projection with a developer link. This portable guide is intentionally generated for the public repository from the workspace developer record. Machine-specific harnesses and raw logs are retained privately. Their source-bound acceptance accompanies the release workflow.
 
 The merged Council Autopilot additions retain `mod/council_assignment_autopilot_compatch/LICENSE-Council-Autopilot.txt`; the CK3 base interface belongs to Paradox Interactive. Integration code and documentation were developed with AI assistance. The cover combines the two required mods' thumbnails with AI assistance; publication media is promotional art, not gameplay evidence. Media provenance and exact prompts are in `publishing/media/`. No new broader reuse license is granted here.
+
+## Release 0.1.1 — CK3 1.20.1
+
+Updated for CK3 1.20.1 and Council Assignment Automation 0.1.1. Preserve the combined council interface and guard the fabricate-claim controls against invalid councillor, task and target states. Update the CAA dependency name.
+
+The committed runtime is the current release source. Earlier generator/test notes above retain their historical scope. Gameplay evidence is inherited from the reviewed development candidate; localization uses static coverage and format checks under publication contract 1.8.0. No additional production engine run or blanket multiplayer/visual guarantee is claimed.

@@ -1,4 +1,4 @@
-version="0.1.0"
+version="0.1.1"
 name="[compatch] CAA + CA"
 tags={
 	"Gameplay"
@@ -7,6 +7,6 @@ tags={
 supported_version="1.20.*"
 picture="thumbnail.png"
 dependencies={
-	"council assignment automation"
+	"Council Assignment Automation"
 	"Council Autopilot"
 }
