@@ -1,6 +1,6 @@
 # [compatch] CAA + CA
 
-**Version 0.1.1 · Targets CK3 1.20.1**
+**Version 0.1.1 · Targets CK3 1.20.1.1**
 
 Compatibility patch for [Council Assignment Automation](https://steamcommunity.com/sharedfiles/filedetails/?id=3815689627) and [Council Autopilot](https://steamcommunity.com/sharedfiles/filedetails/?id=3814775890). Keeps CAA's appointment settings and CA's task buttons together in the council window.
 
