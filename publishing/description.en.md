@@ -16,7 +16,7 @@ Other mods replacing the council window need their own merge. The required mods'
 
 Include your game and mod versions, load order and a short reproduction.
 
-[Report an issue on GitHub](https://github.com/G4VV4KH/council_assignment_autopilot_compatch/issues)
+[Report an issue on GitHub](https://github.com/G4VV4KH/-CK3-Council-Assignment-Autopilot-Compatch/issues)
 
 **Email:** g4vv4kh@gmail.com
 
@@ -27,7 +27,7 @@ Include your game and mod versions, load order and a short reproduction.
 - [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3816373375)
 - [Paradox Mods](https://mods.paradoxplaza.com/mods/162552/Any)
 - [Nexus Mods](https://www.nexusmods.com/crusaderkings3/mods/414)
-- [GitHub](https://github.com/G4VV4KH/council_assignment_autopilot_compatch)
+- [GitHub](https://github.com/G4VV4KH/-CK3-Council-Assignment-Autopilot-Compatch)
 
 
 
