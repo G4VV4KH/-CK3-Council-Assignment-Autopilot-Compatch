@@ -1,5 +1,13 @@
 # [compatch] CAA + CA — developer notes
 
+## CK3 1.21.0.3 transition (0.1.2)
+
+The two supported dependency versions no longer share a gameplay or GUI path. This release retires the council window and scripted-GUI overrides. Historical instructions and evidence below describe earlier builds.
+
+The generator and tests below reproduce the historical council-window merge. For 0.1.2 the runtime contains the descriptor, thumbnail and attribution.
+
+## Archived 0.1.0 developer notes
+
 The only game override is `gui/window_council.gui`. Install Council Assignment Automation 0.1.0 and Council Autopilot 1.0.12 separately; load this patch after both. CAA appoints people; Council Autopilot manages tasks. Their scripts and preferences remain independent.
 
 ## Reproducible merge

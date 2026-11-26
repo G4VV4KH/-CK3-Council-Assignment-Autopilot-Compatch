@@ -1,16 +1,16 @@
 # [compatch] CAA + CA
 
-**Version 0.1.1 · Targets CK3 1.20.1.2**
+**Version 0.1.2 · Targets CK3 1.21.0.3**
 
-Compatibility patch for [Council Assignment Automation](https://steamcommunity.com/sharedfiles/filedetails/?id=3815689627) and [Council Autopilot](https://steamcommunity.com/sharedfiles/filedetails/?id=3814775890). Keeps CAA's appointment settings and CA's task buttons together in the council window.
+[Council Assignment Automation](https://steamcommunity.com/sharedfiles/filedetails/?id=3815689627) handles councillor appointments. [Council Autopilot](https://steamcommunity.com/sharedfiles/filedetails/?id=3814775890) manages their tasks. With CAA 0.1.2 and Autopilot 1.1.6, you can use both mods together directly.
 
 ## Compatibility and load order
 
-Requires **Council Assignment Automation 0.1.1** and **Council Autopilot 1.0.12**, installed separately.
+**New playsets:** Enable Council Assignment Automation 0.1.2 and Council Autopilot 1.1.6. You can skip this patch.
 
-Load **Council Assignment Automation → Council Autopilot → [compatch] CAA + CA**.
+**Existing subscribers:** Version 0.1.2 retires the old council window and task-button overrides. You can remove the patch from your playset or leave the updated copy last: Council Assignment Automation → Council Autopilot → [compatch] CAA + CA.
 
-Other mods replacing the council window need their own merge. The required mods' gameplay and replacement rules remain unchanged. Removing this UI patch does not clear their saved preferences.
+**Manual installations:** When upgrading from 0.1.1, remove the old patch folder before extracting 0.1.2. Overlaying the new archive would leave the old GUI files installed.
 
 ## Feedback and support
 
@@ -50,8 +50,8 @@ Include your game and mod versions, load order and a short reproduction.
 
 ## Credits
 
-Council Autopilot's additions are used under its included MIT notice; the base CK3 interface belongs to Paradox Interactive. The cover combines both mods' thumbnails with AI assistance. Integration code and documentation were developed with AI assistance.
+Earlier versions included Council Autopilot code under its MIT license. The cover combines the two mods’ thumbnails with AI assistance. AI also assisted with integration code and documentation.
 
 ## Contributing
 
-See [developer notes](dev.md) for implementation and verification scope.
+See [developer notes](dev.md) for the patch history.
