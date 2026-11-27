@@ -48,6 +48,10 @@ Include your game and mod versions, load order and a short reproduction.
 - [Accolade Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3836819350) — choose accolade attributes or knights first and set rank limits.
 - [Traitor Trials](https://steamcommunity.com/sharedfiles/filedetails/?id=3843236809) — judge defeated rebels after a war.
 
+### Compatibility patches
+
+- [[compatch] SA + NA](https://steamcommunity.com/sharedfiles/filedetails/?id=3846587662) — use Strategist Assistant and Nomad Autorefill in the same Military window.
+
 ## Credits
 
 Earlier versions included Council Autopilot code under its MIT license. The cover combines the two mods’ thumbnails with AI assistance. AI also assisted with integration code and documentation.
